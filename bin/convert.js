@@ -28,6 +28,7 @@ var sql = "SET CHARACTER SET UTF8;\n" +
           "CREATE TABLE IF NOT EXISTS `store` ( \n" +
           "`key` VARCHAR( 100 ) NOT NULL , \n" + 
           "`value` LONGTEXT NOT NULL , \n" + 
+          "`tm` datetime DEFAULT CURRENT_TIMESTAMP, \n"+
           "PRIMARY KEY (  `key` ) \n" +
           ") ENGINE = INNODB;\n" + 
           "START TRANSACTION;\n\n";
