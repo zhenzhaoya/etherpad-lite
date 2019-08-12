@@ -65,8 +65,8 @@ npm.load({}, function() {
     .then(plugins.update)
     .then(function() {
       console.info("Installed plugins: " + plugins.formatPluginsWithVersion());
-      console.debug("Installed parts:\n" + plugins.formatParts());
-      console.debug("Installed hooks:\n" + plugins.formatHooks());
+      console.info("Installed parts:\n" + plugins.formatParts());
+      console.info("Installed hooks:\n" + plugins.formatHooks());
 
       // Call loadSettings hook
       hooks.aCallAll("loadSettings", { settings: settings });

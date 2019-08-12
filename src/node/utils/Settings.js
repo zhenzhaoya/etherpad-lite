@@ -38,7 +38,7 @@ console.log(`All relative paths will be interpreted relative to the identified E
 /**
  * The app title, visible e.g. in the browser window
  */
-exports.title = "Etherpad";
+exports.title = "Edison Edit";
 
 /**
  * The app favicon fully specified url, visible e.g. in the browser window
@@ -84,11 +84,13 @@ exports.socketTransportProtocols = ['xhr-polling', 'jsonp-polling', 'htmlfile'];
 /*
  * The Type of the database
  */
-exports.dbType = "dirty";
+exports.dbType = "mysql";
 /**
  * This setting is passed with dbType to ueberDB to set up the database
  */
-exports.dbSettings = { "filename" : path.join(exports.root, "var/dirty.db") };
+// exports.dbSettings = { "filename" : path.join(exports.root, "var/dirty.db") };
+
+exports.dbSettings={"user":"root", host: "localhost", password:"root", database: "etherpadDb"};
 
 /**
  * The default Text of a new pad
@@ -101,7 +103,7 @@ exports.defaultPadText = "Welcome to Etherpad!\n\nThis pad text is synchronized 
 exports.padOptions = {
   "noColors": false,
   "showControls": true,
-  "showChat": true,
+  "showChat": false,
   "showLineNumbers": true,
   "useMonospaceFont": false,
   "userName": false,
